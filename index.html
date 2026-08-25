@@ -1,15 +1,217 @@
 <!DOCTYPE html>
-  <html lang="es">
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Renato Cavalcanti Olivares - Portafolio de datos</title>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Renato Cavalcanti Olivares — Portafolio de datos</title>
+<meta name="description" content="Dashboards sobre datos públicos chilenos, con foco en logística y operaciones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EBEEF1;
+  --card:#F4F6F8;
+  --ink:#131E2B;
+  --rule:#C2CBD4;
+  --mute:#5B6A79;
+  --stamp:#1D6A5A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.sheet{max-width:880px;margin:0 auto;padding:0 24px 88px}
+.mono{
+  font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.topbar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 24px;
+  padding:16px 0;
+  border-bottom:2px solid var(--ink);
+  color:var(--mute);
+}
+.head{padding:56px 0 48px;border-bottom:1px solid var(--rule)}
+.kicker{color:var(--stamp);margin-bottom:24px}
+.head h1{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-weight:600;
+  font-size:clamp(3rem,11vw,6rem);
+  line-height:.92;
+  letter-spacing:.005em;
+  text-transform:uppercase;
+  margin-bottom:28px;
+}
+.lede{font-size:clamp(1rem,2.4vw,1.2rem);max-width:54ch;color:#22303F}
+.ident{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:20px;
+  margin-top:40px;
+  padding-top:24px;
+  border-top:1px solid var(--rule);
+}
+.ident dt{color:var(--mute);margin-bottom:4px}
+.ident dd{font-size:.95rem;line-height:1.45}
+.sectitle{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin:56px 0 20px;
+  color:var(--mute);
+}
+.sectitle::after{content:"";flex:1;height:1px;background:var(--rule)}
+.entry{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--ink);
+  padding:26px 26px 22px;
+  margin-bottom:14px;
+}
+.entry-top{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:8px 16px;
+  margin-bottom:10px;
+}
+.entry h3{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-weight:600;
+  font-size:1.75rem;
+  line-height:1.1;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+.state{
+  color:var(--stamp);
+  border:1px solid var(--stamp);
+  border-radius:2px;
+  padding:3px 9px;
+  white-space:nowrap;
+}
+.desc{color:#22303F;max-width:62ch;font-size:.97rem}
+.fields{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:16px 24px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--rule);
+}
+.fields dt{color:var(--mute);margin-bottom:3px}
+.fields dd{font-size:.9rem;line-height:1.45}
+.note{
+  margin-top:36px;
+  padding:18px 20px;
+  border:1px dashed var(--rule);
+  color:var(--mute);
+  font-size:.9rem;
+}
+footer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 24px;
+  margin-top:64px;
+  padding-top:18px;
+  border-top:2px solid var(--ink);
+  color:var(--mute);
+}
+a{color:var(--stamp);text-decoration:none;border-bottom:1px solid currentColor}
+a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
+</style>
 </head>
 <body>
-<h1>Renato Cavalcanti Olivares</h1>
-<p>Ingeniero Civil Industrial. Magister en Logistica y Gestion de Operaciones.</p>
-  <h2>Proyectos</h2>
-  <p>En construccion.</p>
-  </body>
-  </html>
-  
+<div class="sheet">
+
+  <div class="topbar mono">
+    <span>Portafolio de datos públicos</span>
+    <span>Santiago · Chile</span>
+  </div>
+
+  <header class="head">
+    <p class="kicker mono">Logística y operaciones</p>
+    <h1>Renato<br>Cavalcanti<br>Olivares</h1>
+    <p class="lede">Ingeniero Civil Industrial y Magíster en Logística y Gestión de Operaciones. Trabajo datos públicos chilenos para responder preguntas que importan en operaciones: qué se mueve, por dónde entra y cuánto cuesta moverlo.</p>
+
+    <dl class="ident">
+      <div>
+        <dt class="mono">Perfil</dt>
+        <dd>Especialista logístico multifuncional</dd>
+      </div>
+      <div>
+        <dt class="mono">Herramientas</dt>
+        <dd>Power BI · Power Query · DAX · Python · SQL</dd>
+      </div>
+      <div>
+        <dt class="mono">Enfoque</dt>
+        <dd>Costo, flujo y tiempo en cadenas de suministro</dd>
+      </div>
+    </dl>
+  </header>
+
+  <h2 class="sectitle mono">Proyectos</h2>
+
+  <article class="entry">
+    <div class="entry-top">
+      <h3>Comercio exterior de Chile</h3>
+      <span class="state mono">En curso</span>
+    </div>
+    <p class="desc">Importaciones a nivel de ítem, desde el registro de declaraciones de ingreso. Qué se importa, por dónde entra al país y cuánto pesa el flete sobre el valor de la carga, abierto por capítulo arancelario y vía de transporte.</p>
+    <dl class="fields">
+      <div><dt class="mono">Fuente</dt><dd>Servicio Nacional de Aduanas</dd></div>
+      <div><dt class="mono">Método</dt><dd>Power Query, modelo estrella, DAX</dd></div>
+      <div><dt class="mono">Actualización</dt><dd>Mensual</dd></div>
+    </dl>
+  </article>
+
+  <article class="entry">
+    <div class="entry-top">
+      <h3>Costo de transporte carretero</h3>
+      <span class="state mono">En curso</span>
+    </div>
+    <p class="desc">Precio del diésel por región cruzado con el dólar y la UF, para estimar cuánto le cuesta hoy a un transportista mover carga y cómo cambió en los últimos meses.</p>
+    <dl class="fields">
+      <div><dt class="mono">Fuente</dt><dd>Comisión Nacional de Energía, mindicador.cl</dd></div>
+      <div><dt class="mono">Método</dt><dd>Extracción por API, pipeline con GitHub Actions</dd></div>
+      <div><dt class="mono">Actualización</dt><dd>Diaria, automatizada</dd></div>
+    </dl>
+  </article>
+
+  <article class="entry">
+    <div class="entry-top">
+      <h3>Indicadores económicos diarios</h3>
+      <span class="state mono">En curso</span>
+    </div>
+    <p class="desc">UF, UTM, dólar y euro tomados directamente desde una API pública, con actualización programada en la nube y sin intervención manual.</p>
+    <dl class="fields">
+      <div><dt class="mono">Fuente</dt><dd>mindicador.cl</dd></div>
+      <div><dt class="mono">Método</dt><dd>API REST, actualización programada</dd></div>
+      <div><dt class="mono">Actualización</dt><dd>Diaria</dd></div>
+    </dl>
+  </article>
+
+  <p class="note">Todos los datos utilizados son de acceso público. Ningún tablero contiene información de empresas o clientes.</p>
+
+  <footer class="mono">
+    <span>Renato Cavalcanti Olivares</span>
+    <span><a href="https://github.com/TheRenadeus/portafolio-datos">Código y datos en GitHub</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

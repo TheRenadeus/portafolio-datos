@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comercio exterior de Chile — Renato Cavalcanti Olivares</title>
+<meta name="description" content="Quién controla el flete de las importaciones marítimas chilenas, según el Incoterm declarado en Aduanas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EBEEF1;
+  --card:#F4F6F8;
+  --ink:#131E2B;
+  --rule:#C2CBD4;
+  --mute:#5B6A79;
+  --stamp:#1D6A5A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.sheet{max-width:880px;margin:0 auto;padding:0 24px 88px}
+.mono{
+  font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.topbar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 24px;
+  padding:16px 0;
+  border-bottom:2px solid var(--ink);
+  color:var(--mute);
+}
+.back{
+  display:inline-block;
+  margin:24px 0 0;
+  color:var(--mute);
+  border-bottom:1px solid var(--rule);
+}
+.back:hover{color:var(--ink)}
+.head{padding:40px 0 40px;border-bottom:1px solid var(--rule)}
+.kicker{color:var(--stamp);margin-bottom:20px}
+.head h1{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-weight:600;
+  font-size:clamp(2.4rem,8vw,4.2rem);
+  line-height:.95;
+  letter-spacing:.005em;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+.lede{font-size:clamp(1rem,2.4vw,1.15rem);max-width:60ch;color:#22303F}
+.question{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-weight:600;
+  font-size:clamp(1.5rem,4vw,2.1rem);
+  line-height:1.12;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  margin:48px 0 28px;
+  padding-left:16px;
+  border-left:3px solid var(--stamp);
+  color:var(--ink);
+}
+.sectitle{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin:52px 0 20px;
+  color:var(--mute);
+}
+.sectitle::after{content:"";flex:1;height:1px;background:var(--rule)}
+.embed{
+  position:relative;
+  width:100%;
+  padding-bottom:62.3%;
+  height:0;
+  overflow:hidden;
+  border:1px solid var(--rule);
+  border-left:3px solid var(--ink);
+  background:var(--card);
+  margin:8px 0 10px;
+}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hint{color:var(--mute);font-size:.85rem;margin-bottom:8px}
+.findings{list-style:none}
+.findings li{
+  border-top:1px solid var(--rule);
+  padding:18px 0;
+}
+.findings li:last-child{border-bottom:1px solid var(--rule)}
+.findings b{
+  display:block;
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-weight:600;
+  font-size:1.35rem;
+  line-height:1.15;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  margin-bottom:6px;
+}
+.findings p{color:#22303F;max-width:64ch;font-size:.95rem}
+.fields{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:16px 24px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--rule);
+}
+.fields dt{color:var(--mute);margin-bottom:3px}
+.fields dd{font-size:.9rem;line-height:1.45}
+.note{
+  margin-top:32px;
+  padding:18px 20px;
+  border:1px dashed var(--rule);
+  color:var(--mute);
+  font-size:.9rem;
+}
+.note p+p{margin-top:10px}
+footer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 24px;
+  margin-top:56px;
+  padding-top:18px;
+  border-top:2px solid var(--ink);
+  color:var(--mute);
+}
+a{color:var(--stamp);text-decoration:none;border-bottom:1px solid currentColor}
+a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
+p+p{margin-top:14px}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="topbar mono">
+    <span>Portafolio de datos públicos</span>
+    <span>Proyecto 01</span>
+  </div>
+
+  <a class="back mono" href="index.html">&larr; Volver al portafolio</a>
+
+  <header class="head">
+    <p class="kicker mono">Comercio exterior · Aduanas</p>
+    <h1>¿Quién controla<br>el flete?</h1>
+    <p class="lede">Cada declaración de importación registra el Incoterm de la compra: la cláusula que define quién contrata y paga el transporte internacional. Cruzándolo con la vía y el producto se puede ver, ítem por ítem, quién manda en la logística de entrada del país.</p>
+  </header>
+
+  <p class="question">En la carga marítima, el importador chileno controla el flete el 49,8% de las veces. Casi una moneda al aire.</p>
+
+  <h2 class="sectitle mono">Tablero</h2>
+  <p class="hint">Se ve mejor en pantalla ancha. Los datos se actualizan en la nube cada cierto tiempo (no es tiempo real).</p>
+  <div class="embed">
+    <iframe title="Comercio exterior — control del flete" src="https://app.powerbi.com/view?r=eyJrIjoiMjY4NzMwNzQtNjlkYi00ZGY3LThhNmUtNzJkNjMxYTI5YWJmIiwidCI6IjZmZDQ4ZjQxLWFmODEtNDVhNS05YzFlLWUzOTkwYmMyN2U3YyIsImMiOjR9" allowfullscreen="true"></iframe>
+  </div>
+
+  <h2 class="sectitle mono">Qué muestra</h2>
+  <ul class="findings">
+    <li>
+      <b>El Incoterm solo es confiable en la vía marítima</b>
+      <p>Concentra el 72% del valor importado. En vía aérea y terrestre, cerca del 85% de las operaciones no registra un Incoterm utilizable &mdash; un vacío del dato público que el tablero deja a la vista en vez de esconder.</p>
+    </li>
+    <li>
+      <b>El reparto marítimo está parejo</b>
+      <p>Sobre el CIF con Incoterm conocido: el comprador contrata el flete (FOB, FAS, EXW) en el 49,8% y lo cede al vendedor (CIF, CFR, DDP) en el 50,2%.</p>
+    </li>
+    <li>
+      <b>Cambia según el producto</b>
+      <p>Ropa, calzado y muebles entran mayoritariamente FOB: el importador contrata el barco. Vehículos, plásticos y productos químicos vienen CIF o CFR, con el flete puesto por el proveedor extranjero.</p>
+    </li>
+    <li>
+      <b>El detalle llega al capítulo arancelario</b>
+      <p>La matriz abre los 99 capítulos del arancel; la dispersión los ubica según valor importado y grado de control del flete, para señalar dónde hay volumen y poca gestión logística propia.</p>
+    </li>
+  </ul>
+
+  <h2 class="sectitle mono">Método</h2>
+  <dl class="fields">
+    <div><dt class="mono">Fuente</dt><dd>Servicio Nacional de Aduanas &mdash; base de datos de operaciones de ingreso, 2025&ndash;2026</dd></div>
+    <div><dt class="mono">Volumen</dt><dd>~2,8 millones de ítems de importación</dd></div>
+    <div><dt class="mono">Modelo</dt><dd>Power Query, esquema estrella con 12 dimensiones, medidas en DAX</dd></div>
+    <div><dt class="mono">Publicación</dt><dd>Power BI Service, actualización en la nube</dd></div>
+  </dl>
+
+  <div class="note">
+    <p>Los archivos de Aduanas traen 18 columnas: no incluyen flete, seguro, FOB ni peso bruto, por lo que no se calcula un costo logístico sobre el valor de la carga. El análisis se apoya en la cláusula de compraventa (Incoterm), que sí viene en cada ítem.</p>
+    <p>Los códigos de cláusula 0, 7 y 8 no identifican un Incoterm y se agrupan como &laquo;no determinado&raquo; (~36% del CIF marítimo). El porcentaje de control se calcula solo sobre el CIF con Incoterm conocido. Periodos parciales: 2025 enero&ndash;noviembre, 2026 enero&ndash;julio. CIF en dólares nominales, sin deflactar.</p>
+    <p>Todos los datos son de acceso público. Ningún tablero contiene información de empresas o clientes.</p>
+  </div>
+
+  <footer class="mono">
+    <span>Renato Cavalcanti Olivares</span>
+    <span><a href="https://github.com/TheRenadeus/portafolio-datos">Código y datos en GitHub</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -95,6 +95,8 @@ body{
   text-transform:uppercase;
   letter-spacing:.01em;
 }
+.entry h3 a{color:inherit;border-bottom:2px solid var(--stamp)}
+.entry h3 a:hover{color:var(--stamp)}
 .state{
   color:var(--stamp);
   border:1px solid var(--stamp);
@@ -102,6 +104,7 @@ body{
   padding:3px 9px;
   white-space:nowrap;
 }
+.state.live{background:var(--stamp);color:var(--card)}
 .desc{color:#22303F;max-width:62ch;font-size:.97rem}
 .fields{
   display:grid;
@@ -113,6 +116,7 @@ body{
 }
 .fields dt{color:var(--mute);margin-bottom:3px}
 .fields dd{font-size:.9rem;line-height:1.45}
+.golink{display:inline-block;margin-top:18px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
 .note{
   margin-top:36px;
   padding:18px 20px;
@@ -168,15 +172,16 @@ a:focus-visible{outline:2px solid var(--stamp);outline-offset:3px}
 
   <article class="entry">
     <div class="entry-top">
-      <h3>Comercio exterior de Chile</h3>
-      <span class="state mono">En curso</span>
+      <h3><a href="comercio-exterior.html">Comercio exterior de Chile</a></h3>
+      <span class="state live mono">Tablero en vivo</span>
     </div>
-    <p class="desc">Importaciones a nivel de ítem, desde el registro de declaraciones de ingreso. Qué se importa, por dónde entra al país y cuánto pesa el flete sobre el valor de la carga, abierto por capítulo arancelario y vía de transporte.</p>
+    <p class="desc">Importaciones a nivel de ítem, desde el registro de declaraciones de ingreso. Quién controla el flete de la carga marítima según el Incoterm declarado, abierto por capítulo arancelario y vía de transporte.</p>
     <dl class="fields">
       <div><dt class="mono">Fuente</dt><dd>Servicio Nacional de Aduanas</dd></div>
       <div><dt class="mono">Método</dt><dd>Power Query, modelo estrella, DAX</dd></div>
       <div><dt class="mono">Actualización</dt><dd>Mensual</dd></div>
     </dl>
+    <a class="golink" href="comercio-exterior.html">Ver tablero y hallazgos &rarr;</a>
   </article>
 
   <article class="entry">

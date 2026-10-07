@@ -10,7 +10,7 @@ Dashboards construidos sobre fuentes publicas chilenas, con foco en logistica y 
 
 | Proyecto | Fuente | Actualizacion | Estado |
 |---|---|---|---|
-| Comercio exterior de Chile | Servicio Nacional de Aduanas | Mensual | En construccion |
+| [Comercio exterior de Chile](https://therenadeus.github.io/portafolio-datos/comercio-exterior.html) | Servicio Nacional de Aduanas | Mensual | Publicado |
 | Indice de costo de transporte carretero | CNE + mindicador.cl | Diaria, automatizada | En construccion |
 | Indicadores economicos diarios | mindicador.cl | Diaria | En construccion |
 
